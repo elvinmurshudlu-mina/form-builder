@@ -1,7 +1,7 @@
 export interface FormComponentsProps{
     label: string,
     fieldName: string,
-    initialValue?: string,
+    // initialValue?: string,
 }
 export type ComponentWrapperDependOnProps = { dependOn?: string[]; isVisible?: (values: any[]) => boolean ,calculateValue?: (values: any[]) => any}
 

@@ -13,7 +13,6 @@ export type FormInputProps = BaseFormInputProps & IFormComponentProps;
 function FormInput({
                        label,
                        fieldName,
-                       initialValue,
                        className,
                        dependOn,
                        isVisible,
@@ -30,8 +29,7 @@ function FormInput({
             <Controller
                 control={control}
                 name={fieldName}
-                defaultValue={initialValue}
-                render={({ field }) => <Input id={id} {...field} {...inputProps}/>}
+                render={({ field }) => <Input id={id} {...field} {...inputProps} />}
             />
         </ComponentWrapper>
     );
