@@ -27,12 +27,13 @@ function App() {
         }
     });
 
-    console.log(form.watch());
+
+
 
     return (
         <>
             <FormWrapper form={form} onSubmit={(values) => console.log(values)}>
-                <FormInput fieldName={'name'} label={'Name'} initialValue={'Elvin'}></FormInput>
+                <FormInput fieldName={'name'} label={'Name'} ></FormInput>
                 <FormInput fieldName={'surname'} label={'Surname'}></FormInput>
                 <FormSelect  dependOn={['name']}   label={"Select gender"} fieldName={'gender'} options={[
                     {
@@ -44,7 +45,7 @@ function App() {
                         value:'female'
                     }
                 ]}></FormSelect>
-                <FormDatePicker  label={'Birthday'} fieldName={'birthday'}></FormDatePicker>
+                <FormDatePicker  label={'Birthday'} fieldName={'birthday'} ></FormDatePicker>
                 <Button htmlType={'submit'}>Submit</Button>
             </FormWrapper>
         </>
