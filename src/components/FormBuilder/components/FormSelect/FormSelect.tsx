@@ -16,7 +16,7 @@ function FormSelect({label,fieldName,dependOn,isVisible,calculateValue,className
     return (
         <ComponentWrapper className={className} dependOn={dependOn} isVisible={isVisible} calculateValue={calculateValue} label={label} fieldName={fieldName} id={id} >
             <Controller render={({field})=>{
-                return <Select style={{width:"100%"}}  {...field} {...props} id={id}></Select>
+                return <Select style={{width:"100%"}} allowClear={true}  {...field} {...props} id={id}></Select>
             }} name={fieldName} control={control}></Controller>
         </ComponentWrapper>
 

@@ -1,3 +1,6 @@
+
+
+
 import {Input, type InputProps} from "antd";
 import ComponentWrapper from "../ComponentWrapper/ComponentWrapper";
 import {useId, useState,} from "react";
@@ -40,16 +43,16 @@ function FormInput({
             <Controller
                 control={control}
                 name={fieldName}
-                render={({field}) => <Input id={id} {...field} {...inputProps}
+                render={({field}) => <Input  id={id} {...field} {...inputProps}
 
-                                            type={type == 'password' ?
+                                             type={type == 'password' ?
 
-                                                (isPassword ? 'password' : 'text')
-                                                : type}
+                                                 (isPassword ? 'password' : 'text')
+                                                 : type}
 
-                                            suffix={type == 'password' ?
-                                                <SeePassword handleChange={changeVisibility}
-                                                             isVisible={isPassword}/> : suffix}
+                                             suffix={type == 'password' ?
+                                                 <SeePassword handleChange={changeVisibility}
+                                                              isVisible={isPassword}/> : suffix}
                 />}
             />
         </ComponentWrapper>
@@ -63,3 +66,4 @@ function SeePassword(props: { isVisible: boolean, handleChange: () => void }) {
 }
 
 export default FormInput;
+
